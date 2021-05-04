@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            border: 2px solid coral;
+        }
+
+        input[type="email"] {
+            border: 5px solid green;
+        }
+
+        [alt~="strive"] {
+            border: 10px solid red;
+        }
+
+        input,
+        img {
+            padding: 20px;
+        }
+
+        /* a#test li.bold {} */
+
+        #submitbutton {
+            background-color: crimson;
+        }
+
+        [id="submitbutton"] {
+            background-color: cornflowerblue;
+        }
+
+        .list-item,
+        .items-in-the-list {
+            background-color: crimson;
+            color: white;
+        }
+
+        div>p {
+            background-color: greenyellow;
+            border: 1px solid green;
+        }
+
+        #iamthespecialone {
+            border: 5px solid yellow;
+        }
+
+        li~.list-item {
+            background-color: gray;
+        }
+
+        .selected {
+            border: 2px solid red;
+            background: white;
+            color: red;
+        }
+
+        .selected::before{
+            content: "";
+            background: url("https://i.pinimg.com/originals/60/dc/0d/60dc0dc0ec53bce7ad54c1adb4c890c3.jpg");
+            width: 100px;
+            background-size:cover;
+            height: 100px;
+            position:absolute;
+        }
+
+        .selected::after{
+            content: "";
+            background: url("https://i.pinimg.com/originals/60/dc/0d/60dc0dc0ec53bce7ad54c1adb4c890c3.jpg");
+            width: 100px;
+            background-size:cover;
+            height: 100px;
+            position:absolute;
+        }
+
+        .selected~li {
+            background:red;
+            color: yellow;
+        }
+
+        .selected+li {
+            background: greenyellow;
+            color: purple;
+            padding:20px;
+        }
+
+        .element-for-sale p+p{
+            color:red;
+        }
+
+        input:focus {
+            border: 10px solid red;
+            padding: 50px;
+        }
+
+        input:hover {
+            background: yellow;
+            border: 10px solid red;
+            padding: 50px;
+        }
+
+        p:hover {
+            color:honeydew;
+            background-color: khaki;
+        }
+
+        p:hover::after {
+            content:"_";
+            background: red;
+            width: 50px;
+            height: 50px;
+        }
+
+        p:focus {
+            background: red;
+        }
+
+        .img-with-overlay {
+            position:relative;
+        }
+
+        .img-with-overlay:hover::after {
+            content: "1917 - The Movie";
+            position: absolute;
+            top: 200px;
+            left: 0;
+            right: 0;
+            background-color: lavender;
+            color: darkblue;
+        }
+
+        /* div:hover::after{
+              content: "1917 - The Movie";
+            position: absolute;
+            top: 200px;
+            left: 0;
+            right: 0;
+            background-color: lavender;
+            color: darkblue;
+        } */
+
+        /* (0,0,1) 
+        0IDs
+        0classes or pseudo classes
+        1element or pseudo element
+        */
+        input {
+            color: green;
+        }
+
+        /* 0, 1, 1
+        0 id
+        1 class (the attribute)
+        1 tag name */
+        input[type="email"] {
+
+        }
+
+        /*(1,3,2) */
+        .selected.test.class2 #test>span>a {
+
+        }
+
+        /* (1,0,0) */
+        #test {
+
+        }
+
+        .bg-white {
+            background-color: whitesmoke !important;
+        }
+
+        .bg-dark {
+            background-color: darkblue;
+        }
+
+        /* #whiteone {
+            background-color: whitesmoke;
+        } */
+
+      
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="bg-white bg-dark" style="background-color: red;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aperiam excepturi eveniet eos aliquid voluptate nulla, dignissimos, quos corrupti blanditiis possimus, impedit qui sit provident dolore! Soluta qui accusamus consequatur.</p>
+    </div>
+    <input type="email" />
+    <input type="password" />
+    <input type="submit" value="login" id="submitbutton" />
+
+    <img src="" alt="group picture of strive school fs apr21 batch" />
+
+    <ul>
+        <li class="list-item" id="iamthespecialone">Random Text</li>
+        <li class="list-item">Random Text</li>
+        <li class="list-item">Random Text</li>
+        <li >Random Text</li>
+        <li class="list-item">Random Text</li>
+    </ul>
+
+    <div class="element-for-sale">
+        <h2>Element For sale</h2>
+        <p>15€</p>
+        <p>10 items left!</p>
+    </div>
+
+    <ul>
+        <li class="items-in-the-list">Random Text</li>
+        <li class="list-item">Random Text</li>
+    </ul>
+
+    <ul id="peoplelist">
+       
+    </ul>
+
+    <div>
+        <a href="https://strive.school">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quaerat. Autem ex voluptas possimus quae
+                cumque est esse sed nihil qui dolorum facere, cum pariatur vel sapiente quos nemo quam!</p>
+        </a>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid nulla quidem quisquam reprehenderit eum
+            optio odio laboriosam vel placeat ullam architecto iusto qui, sit sed provident praesentium perspiciatis
+            quis nobis.</p>
+    </div>
+
+    <div class="img-with-overlay">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/61Zf5g-xUxL._AC_SL1039_.jpg" alt="1917"  />
+</div>
+
+    <script>
+        window.onload = function() {
+            const ul =document.getElementById("peoplelist")
+            for (let i = 0; i < 12; i++){
+                const li = document.createElement("li")
+                li.innerText = i
+                li.addEventListener("click", function(e) {
+                    e.currentTarget.classList.toggle("selected")
+                })
+
+                ul.appendChild(li)
+            }
+        }
+
+    </script>
+</body>
+
+</html>
